@@ -17,7 +17,7 @@ open class WLCameraController: UIViewController {
     
     var url: String?
     var type: CameraType?
-    
+    public var videoLength:Double = 10
     public var completeBlock: (String, CameraType) -> () = {_,_  in }
     
     let previewImageView = UIImageView()
@@ -70,6 +70,7 @@ open class WLCameraController: UIViewController {
         
         controlView = WLCameraControl.init(frame: CGRect(x: 0, y: cameraContentView.height - 150, width: self.view.width, height: 150))
         controlView.delegate = self
+        controlView.videoLength = videoLength
         cameraContentView.addSubview(controlView)
     }
     

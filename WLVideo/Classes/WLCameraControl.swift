@@ -28,7 +28,7 @@ class WLCameraControl: UIView {
     
     weak open var delegate: WLCameraControlDelegate?
     
-    let videoLength: Double = 10
+    var videoLength: Double = 10
     var recordTime: Double = 0
     
     let cameraButton = UIVisualEffectView(effect: UIBlurEffect.init(style: .extraLight))
